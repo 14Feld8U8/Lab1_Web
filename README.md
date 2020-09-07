@@ -17,3 +17,5 @@
 <p align="center">
   <img src=images/areas.png>
 </p>
+
+## Result: https://se.ifmo.ru/~s285599/Web_Lab1/
