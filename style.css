@@ -73,7 +73,6 @@ header {
     align-items: center;
     justify-content: center;
     min-width: 1100px;
-
 }
 
 header .column {
@@ -204,16 +203,16 @@ header .made_by {
 }
 
 .send_form .r_button:hover, .send_button:hover {
-    background-color: #330570 !important;
-    color: white !important;
-    border-color: #A65F00 !important;
-    box-shadow: 0 4px 4px #FF9200 !important;
+    background-color: #330570;
+    color: white;
+    border-color: #A65F00;
+    box-shadow: 0 4px 4px #FF9200;
 }
 
-.input_err {
-    background-color: #E40045 !important;
-    border-color: #94002D !important;
-    box-shadow: 0 4px 4px #94002D !important;
+.send_form .input_err {
+    background-color: #E40045;
+    border-color: #94002D;
+    box-shadow: 0 4px 4px #94002D;
 
 }
 
@@ -257,6 +256,7 @@ th {
 
 td {
     color: #330570;
+    word-break: break-all;
 }
 
 
