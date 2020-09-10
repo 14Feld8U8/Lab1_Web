@@ -16,7 +16,6 @@ $res = check_area($x, $y, $r) ? "<span style='color: #439400'>Попала</span
 $time = microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
 
 
-
 $_SESSION['results'][] = [$x, $y, $r, $currentTime, $time, $res];
 
 function check_values($x, $y, $r)
@@ -28,12 +27,14 @@ function check_values($x, $y, $r)
 
 function check_area($x, $y, $r)
 {
-    if ($x <= 0) {
-        return ($y <= 0 and ($x * $x + $y * $y <= $r * $r / 4)); //часть окружности
-    } else {
-        return $y >= 0 and $y <= -$x + $r // треугольник
+    if ($x == 0) {
+        return ($y <= 0 and ($x * $x + $y * $y <= $r * $r / 4)) //часть окружности
+            or ($y >= 0 and $y <= -$x + $r) // треугольник
             or ($y <= 0 and $x <= $r / 2 and $y >= -$r); //прямоугольник;
-    }
+    } else if ($x > 0) {
+        return ($y >= 0 and $y <= -$x + $r) // треугольник
+            or ($y <= 0 and $x <= $r / 2 and $y >= -$r); //прямоугольник;
+    } else return ($y <= 0 and ($x * $x + $y * $y <= $r * $r / 4)); //часть окружности
 }
 
 ?>
